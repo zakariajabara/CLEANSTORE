@@ -1,0 +1,39 @@
+Creating a Custom Directive
+
+create a ts file (ex counter.directive.ts) 
+
+import the directive in your module 
+//Use the Customer created Derective
+// import the derective and add it in the declarations
+
+Adding URL Routing
+For our application we will need three URLs
+
+URL         Description
+/store      This URL will display the list of products.
+/cart       This URL will display the user’s cart in detail.
+/checkout   This URL will display the checkout process
+
+- Creating the Cart Detail and Checkout Components
+create two Components in the store folder : cartDetail.component.ts and checkout.component.ts
+register the compoenent in the store.module.ts 
+
+- Creating and Applying the Routing Configuration
+the routing configuration tells Angular how to map URLs into components. Each mapping of a URL to a component is known as a
+URL route or just a route.
+define the routes within the @NgModule decorator of the application’s root module.
+Use the RouterModule.forRoot
+
+import { RouterModule } from "@angular/router";
+imports: [BrowserModule, StoreModule,
+RouterModule.forRoot([
+{ path: "store", component: StoreComponent },
+{ path: "cart", component: CartDetailComponent },
+{ path: "checkout", component: CheckoutComponent },
+{ path: "**", redirectTo: "/store" }
+])],
+
+- Navigating Through the Application
+
+
+
