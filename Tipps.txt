@@ -36,4 +36,11 @@ RouterModule.forRoot([
 - Navigating Through the Application
 
 
+-Installing the PWA (Progressive Web Application) Package 
+ng add @angular/pwa
+
+- installing package to use secure connection
+npm install --save-dev express@4.16.3
+npm install --save-dev connect-history-api-fallback@1.5.0
+npm install --save-dev https@1.0.0
 
